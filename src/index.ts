@@ -16,10 +16,16 @@ import userRoutes from './routes/user.js'
 const app = express()
 dotenv.config()
 
+const originList = ['https://kanban-i8hws.ondigitalocean.app', 'http://localhost:3000']
+
+const corsOptions = {
+  origin: originList,
+  optionsSuccessStatus: 200
+}
+
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-
-app.use(cors())
+app.use(cors(corsOptions))
 app.use(express.json())
 
 app.use('/boards', boardRoutes)
