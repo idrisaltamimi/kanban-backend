@@ -12,7 +12,7 @@ import boardRoutes from './routes/boards.js';
 import userRoutes from './routes/user.js';
 const app = express();
 dotenv.config();
-const originList = ['https://kanban-i8hws.ondigitalocean.app', 'http://localhost:3000'];
+const originList = ['https://kanban-i8hws.ondigitalocean.app', 'https://dreamy-dasik-96dfe4.netlify.app', 'http://localhost:3000'];
 const corsOptions = {
     origin: originList,
     optionsSuccessStatus: 200
